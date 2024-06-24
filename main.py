@@ -1,8 +1,16 @@
 stack = []
+top = -1
 
 def push(element: str):
+	global top
+	top += 1
+	stack[top] = element
 
 def pop():
+	global top
+	element = stack[top]
+	top -= 1
+	return element
 
 def isPalindrome(string: str) -> bool:
 	global stack
@@ -28,9 +36,9 @@ def isPalindrome(string: str) -> bool:
 	return True
 
 if __name__ == "__main__":
-    string = input()
+    string = input("Enter word: ")
 
     if isPalindrome(string):
-        print("Yes")
+        print(f"{string} is a Palindrome")
     else:
-        print("No")
+        print(f"{string} is NOT a Palindrome")
