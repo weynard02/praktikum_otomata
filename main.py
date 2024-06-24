@@ -1,7 +1,7 @@
 def isPalindrome(string: str) -> bool:
-    
+    return 1
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     string = input()
 
     if isPalindrome(string):
