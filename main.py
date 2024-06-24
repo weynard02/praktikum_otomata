@@ -1,22 +1,14 @@
 stack = []
-top = -1
 
 def push(element: str):
-	global top
-	top += 1
-	stack[top] = element
+	stack.append(element)
 
 def pop():
-	global top
-	element = stack[top]
-	top -= 1
-	return element
+    return stack.pop()
 
 def isPalindrome(string: str) -> bool:
 	global stack
 	length = len(string)
-
-	stack = ['0'] * (length + 1)
 
 	mid = length // 2
 	i = 0
